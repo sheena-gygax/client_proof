@@ -4,6 +4,7 @@ class CreateClients < ActiveRecord::Migration[5.1]
       t.string 'name'
       t.string 'urn'
       t.string 'vertical'
+      t.string 'uuid'
       t.timestamps
     end
   end

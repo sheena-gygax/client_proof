@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20171019175633) do
     t.string "name"
     t.string "urn"
     t.string "vertical"
+    t.string "uuid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
