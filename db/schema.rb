@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 20171019175633) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "clients", force: :cascade do |t|
     t.string "name"

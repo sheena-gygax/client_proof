@@ -22,3 +22,12 @@ test:
   username: <%= ENV["DB_USERNAME"] %>
   password: <%= ENV["DB_PASSWORD"] %>
 
+# salesforce:
+  # <<: *default
+  # client_id: MVG9g9rbsTkKnAULfp4fzzy52o8.zkbvjUAsBQDSPa0WveWq502YVnCXjy.M0_Jbc8aWkE8paLB2VIjKVGr7   
+  # client_secret: 7583119177831457562 
+  # username: sheenagygax@getg5.com
+  # password: M@gnu$09
+  # security_token: mphUO7OdyGi84D526TL4jzjcw
+  # objects: [Client]
+
