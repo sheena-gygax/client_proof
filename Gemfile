@@ -17,6 +17,7 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'responders'
 
 
 group :development, :test do
@@ -33,6 +34,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0' 
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'pry'
   gem 'rb-readline' 
 end
 

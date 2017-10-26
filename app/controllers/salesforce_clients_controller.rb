@@ -1,24 +1,22 @@
-class ClientsController < ApplicationController
+class SalesforceClientsController < ApplicationController
   before_action :set_client, only: [:show, :edit, :update, :destroy]
-  respond_to :html, :json
 
   def index
-    @clients = Client.all
-    respond_with(@clients)
+    @clients = SalesforceClient.all
   end
 
   def show
   end
 
   def new
-    @client = Client.new
+    @client = SalesforceClient.new
   end
 
   def edit
   end
 
   def create
-    @client = Client.new(client_params)
+    @client = SalesforceClient.new(client_params)
 
     respond_to do |format|
       if @client.save
@@ -54,11 +52,11 @@ class ClientsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_client
-      @client = Client.find(params[:id])
+      @client = SalesforceClient.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def client_params
-      params.require(:client).permit(:name, :urn, :vertical)
+      params.require(:client).permit(:name, :urn, :vertical, :client_external_id__c)
     end
 end
