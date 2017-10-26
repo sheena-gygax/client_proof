@@ -1,6 +1,6 @@
 <div class="starter-template">
   <h1>Listing Clients</h1>
-
+  <p>Mappped heroku object using salesforce schema</p>
   <table class="table">
     <thead>
       <tr>
@@ -14,7 +14,7 @@
     </thead>
 
     <tbody>
-      <% @clients.each do |client| %>
+      <% @sf_clients.each do |client| %>
         <tr>
           <td><%= client.name %></td>
           <td><%= client.urn__c %></td>
@@ -29,6 +29,6 @@
 
   <br>
 
-  <%= link_to 'New Client', new_client_path %>
+  <%= link_to 'New Client', new_salesforce_client_path %>
 </div>
 

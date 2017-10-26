@@ -1,10 +1,12 @@
 class ClientsController < ApplicationController
   before_action :set_client, only: [:show, :edit, :update, :destroy]
-  respond_to :html, :json
 
   def index
     @clients = Client.all
-    respond_with(@clients)
+    respond_to do |format|
+      format.html { render action: 'index' }
+      format.json { render json: @clients } 
+    end
   end
 
   def show

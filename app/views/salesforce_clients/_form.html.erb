@@ -1,0 +1,30 @@
+<%= form_for(@sf_client) do |f| %>
+  <% if @sf_client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sf_client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+      <ul>
+      <% @sf_client.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name, "Name" %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :urn__c, "URN" %><br>
+    <%= f.text_field :urn__c %>
+  </div>
+  <div class="field">
+    <%= f.label :vertical__c, "Vertical" %><br>
+    <%= f.text_field :vertical__c %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sf_client.name %>
+</p>
+
+<p>
+<strong>Client URN</strong>
+<%= @sf_client.urn__c %>
+</p>
+
+<p>
+  <strong>Vertical:</strong>
+  <%= @sf_client.vertical__c %>
+</p>
+
+<%= link_to 'Edit', edit_salesforce_client_path(@sf_client) %> |
+<%= link_to 'Back', salesforce_clients_path %>
